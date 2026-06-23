@@ -125,7 +125,7 @@ var PASS_SCORE = 60;
 var ADMIN_PWD = 'aqttest2026';
 var BM_APP_ID = '2940941127b6125eaedc9841eb01d02b';
 var BM_API_KEY = 'af1e9c184eab1d52a2569982e2ac3fe5';
-var BM_BASE = 'https://api2.bmob.cn';
+var BM_BASE = 'https://api.bmob.cn';
 
 // ==================== 状态 ====================
 var S = { page: 'login', user: null, questions: [], fullQuestions: [], answers: {}, result: null, tapCount: 0, tapTimer: null };
@@ -485,7 +485,7 @@ function renderAdmin(app) {
     document.getElementById('seedBtn').addEventListener('click', function() { doSeed(this); });
     document.getElementById('backBtn3').addEventListener('click', function() { S.page = 'home'; render(); });
   }).catch(function(e) {
-    app.innerHTML = '<div class="container"><div class="empty">❌ 加载失败<br><small>' + esc(e.message) + '</small><br><br>请确认：<br>1. Bmob 后台已创建 questions 和 exam_records 表<br>2. 网络可访问 api2.bmob.cn<br><br><button class="btn btn-outline" id="backBtn4">返回首页</button></div></div>';
+    app.innerHTML = '<div class="container"><div class="empty">❌ 加载失败<br><small>' + esc(e.message) + '</small><br><br>请确认：<br>1. Bmob 后台已创建 questions 和 exam_records 表<br>2. 网络可访问 api.bmob.cn<br><br><button class="btn btn-outline" id="backBtn4">返回首页</button></div></div>';
     document.getElementById('backBtn4').addEventListener('click', function() { S.page = 'home'; render(); });
   });
 }
